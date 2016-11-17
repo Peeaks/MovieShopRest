@@ -16,8 +16,6 @@ namespace DLL.Contexts {
             modelBuilder.Entity<Cart>().HasMany(a => a.Movies).WithMany();
 
             modelBuilder.Entity<Cart>().HasOptional(x => x.PromoCode);
-
-            Database.SetInitializer(new MovieShopDbSeeder());
         }
 
         public DbSet<Genre> Genres { get; set; }
